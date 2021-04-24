@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     final txtField2 = TextField(
       obscureText: true,
-      style: GoogleFonts.montserrat(
+      style: GoogleFonts.roboto(
         fontSize: 20.0,
       ),
       decoration: InputDecoration(
