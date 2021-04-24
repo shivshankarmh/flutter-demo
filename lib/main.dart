@@ -92,7 +92,6 @@ class _MyHomePageState extends State<MyHomePage> {
               img,
               txtField1,
               txtField2,
-              loginButton,
             ],
           ),
         ],
