@@ -1,15 +1,22 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:helloworld/graphics.dart';
-import 'package:helloworld/signup.dart';
+import 'package:helloworld/httprequestdemo.dart';
+// import 'package:widget_demo/futuredemo.dart';
+import 'package:helloworld/widgets/graphics.dart';
+import 'package:helloworld/widgets/gridviewcountdemo.dart';
+// import 'package:widget_demo/gridviewbuilder.dart';
+import 'package:helloworld/auth/signup.dart';
+
+import 'widgets/graphics.dart';
+// import 'package:widget_demo/streambuilderdemo.dart';
+// import 'package:widget_demo/listview.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,7 +26,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo'),
+      home: HttpHomePage(),
     );
   }
 }
@@ -125,33 +132,37 @@ class _MyHomePageState extends State<MyHomePage> {
               accountName: Text('NextinGo'),
               accountEmail: Text('nextingoindia@gmail.com'),
               currentAccountPicture: CircleAvatar(
+                backgroundImage: AssetImage('assets/1.png'),
                 backgroundColor: Colors.white,
-                child: Text(
-                  'Next',
-                  style: GoogleFonts.montserrat(
-                    color: Colors.blue,
-                    fontSize: 25,
-                  ),
-                ),
+                // child: Text('Next',style: GoogleFonts.montserrat(color: Colors.blue, fontSize: 25,),),
               ),
             ),
             ListTile(
               leading: Icon(Icons.settings),
               title: Text('Settings'),
-              trailing: Text('27/04/2021'),
+              trailing: Icon(Icons.arrow_forward_outlined),
               subtitle: Text('Update values'),
+              onTap: () {
+                Navigator.pop(context);
+              },
             ),
             ListTile(
               leading: Icon(Icons.dock_outlined),
               title: Text('FAQ'),
-              trailing: Text(''),
+              trailing: Icon(Icons.arrow_forward_outlined),
               subtitle: Text('Read before raising tickets'),
+              onTap: () {
+                Navigator.pop(context);
+              },
             ),
             ListTile(
               leading: Icon(Icons.logout),
               title: Text('Logout'),
-              trailing: Text(''),
+              trailing: Icon(Icons.arrow_forward_outlined),
               subtitle: Text('This will sign you out'),
+              onTap: () {
+                Navigator.pop(context);
+              },
             ),
           ],
         ),
